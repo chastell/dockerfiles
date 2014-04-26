@@ -1,4 +1,4 @@
-FROM trusty
+FROM chastell/trusty
 
 MAINTAINER Piotr Szotkowski <chastell@chastell.net>
 
