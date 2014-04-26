@@ -11,3 +11,5 @@ RUN echo "deb http://archive.ubuntu.com/ubuntu trusty-updates  main restricted u
 RUN apt-get update && apt-get --assume-yes dist-upgrade
 
 RUN apt-get install --assume-yes tree
+
+RUN apt-get clean
