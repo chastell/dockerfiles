@@ -3,18 +3,18 @@
 set -e
 
 chown -R mysql:mysql /var/lib/mysql
-mysql_install_db --user mysql
+mysql_install_db --user=mysql
 
-tfile=`mktemp`
+tempfile=`mktemp`
 
-cat << EOF > $tfile
+cat << EOF > $tempfile
 USE mysql;
 FLUSH PRIVILEGES;
 GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' WITH GRANT OPTION;
 UPDATE user SET password = PASSWORD("$MYSQL_ROOT_PASSWORD") WHERE user = 'root';
 EOF
 
-/usr/sbin/mysqld --bootstrap < $tfile
-rm -f $tfile
+/usr/sbin/mysqld --bootstrap < $tempfile
+rm -f $tempfile
 
-exec /usr/sbin/mysqld
+mysqld_safe --skip-syslog
