@@ -7,8 +7,8 @@ RUN apt-get install --assume-yes mysql-server
 ADD files/etc /etc
 ADD files/usr /usr
 
-VOLUME ["/var/lib/mysql"]
+VOLUME /var/lib/mysql
 
 EXPOSE 3306
 
-CMD ["/usr/local/bin/setup_and_start_mysql.sh"]
+CMD /usr/local/bin/setup_and_start_mysql.sh
