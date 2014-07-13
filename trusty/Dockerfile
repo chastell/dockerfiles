@@ -10,7 +10,4 @@ RUN echo "deb http://archive.ubuntu.com/ubuntu trusty-security main restricted u
 RUN echo "deb http://archive.ubuntu.com/ubuntu trusty-updates  main restricted universe multiverse" >> /etc/apt/sources.list
 RUN apt-get update
 RUN apt-get --assume-yes dist-upgrade
-
-RUN apt-get install --assume-yes tree
-
 RUN apt-get clean
