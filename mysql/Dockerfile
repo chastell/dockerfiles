@@ -2,6 +2,7 @@ FROM chastell/trusty
 
 MAINTAINER Piotr Szotkowski <chastell@chastell.net>
 
+RUN apt-get update
 RUN apt-get install --assume-yes mysql-server
 
 ADD files/etc /etc
