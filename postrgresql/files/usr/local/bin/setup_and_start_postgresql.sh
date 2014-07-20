@@ -2,7 +2,7 @@
 
 set -e
 
-chown -R postgres:postgres /etc/postgresql /var/lib/postgresql
+chown --recursive postgres:postgres /etc/postgresql /var/lib/postgresql
 chmod u=rwx,g=,o= /var/lib/postgresql
 
 if [ ! -d /var/lib/postgresql/9.3/main ]; then

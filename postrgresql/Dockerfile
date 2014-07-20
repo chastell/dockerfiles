@@ -4,7 +4,7 @@ MAINTAINER Piotr Szotkowski <chastell@chastell.net>
 
 RUN apt-get update
 RUN apt-get install --assume-yes pwgen postgresql
-RUN rm -fr /var/lib/postgresql
+RUN rm --force --recursive /var/lib/postgresql
 
 ADD files/etc /etc
 ADD files/usr /usr
