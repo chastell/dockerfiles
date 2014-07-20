@@ -2,7 +2,7 @@
 
 set -e
 
-chown -R mysql:mysql /var/lib/mysql
+chown --recursive mysql:mysql /var/lib/mysql
 chmod u=rwx,g=,o= /var/lib/mysql
 
 if [ ! -d /var/lib/mysql/mysql ]; then
