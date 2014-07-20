@@ -4,6 +4,7 @@ MAINTAINER Piotr Szotkowski <chastell@chastell.net>
 
 RUN apt-get update
 RUN apt-get install --assume-yes redis-server
+RUN apt-get clean
 
 ADD files/etc /etc
 ADD files/usr /usr
