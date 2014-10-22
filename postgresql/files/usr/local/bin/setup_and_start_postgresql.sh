@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -e
+set -euo pipefail
 
 chown --recursive postgres:postgres /etc/postgresql /var/lib/postgresql
 chmod u=rwx,g=,o= /var/lib/postgresql

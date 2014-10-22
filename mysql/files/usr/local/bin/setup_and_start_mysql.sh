@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -e
+set -euo pipefail
 
 chown --recursive mysql:mysql /var/lib/mysql
 chmod u=rwx,g=,o= /var/lib/mysql
