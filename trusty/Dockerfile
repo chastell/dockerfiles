@@ -16,4 +16,4 @@ RUN apt-get --assume-yes dist-upgrade
 RUN apt-get install --assume-yes software-properties-common
 RUN apt-get autoremove
 RUN apt-get clean
-RUN rm -fr /var/lib/apt/lists/* /tmp/* /var/tmp/*
+RUN rm -fr /tmp/* /var/tmp/*
