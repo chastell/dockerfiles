@@ -11,9 +11,9 @@ RUN rm /etc/apt/sources.list
 RUN echo "deb http://archive.ubuntu.com/ubuntu trusty          main restricted universe multiverse" >> /etc/apt/sources.list
 RUN echo "deb http://archive.ubuntu.com/ubuntu trusty-security main restricted universe multiverse" >> /etc/apt/sources.list
 RUN echo "deb http://archive.ubuntu.com/ubuntu trusty-updates  main restricted universe multiverse" >> /etc/apt/sources.list
-RUN apt-get update
-RUN apt-get --assume-yes dist-upgrade
-RUN apt-get install --assume-yes software-properties-common
-RUN apt-get autoremove
-RUN apt-get clean
-RUN rm -fr /tmp/* /var/tmp/*
+RUN apt-get update                                          && \
+    apt-get --assume-yes dist-upgrade                       && \
+    apt-get install --assume-yes software-properties-common && \
+    apt-get autoremove                                      && \
+    apt-get clean                                           && \
+    rm -fr /tmp/* /var/tmp/*
