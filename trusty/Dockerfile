@@ -11,7 +11,7 @@ ADD files /
 
 RUN apt-get update                                                   && \
     apt-get --assume-yes dist-upgrade                                && \
-    apt-get install --assume-yes lsb-core software-properties-common && \
+    apt-get --assume-yes install lsb-core software-properties-common && \
     apt-get autoremove                                               && \
     apt-get clean                                                    && \
     rm -fr /tmp/* /var/tmp/*
